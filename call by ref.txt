@@ -1,0 +1,25 @@
+using System;
+namespace pro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   
+            int a = 5, b = 6;
+            checkfun(ref a, ref b);
+            Console.WriteLine($"outside a{a}");
+            Console.WriteLine($"outside b{b}");
+        }
+
+
+
+        public static void checkfun(ref int x, int y)
+        {
+            x += 10;
+            y *= 5;
+            Console.WriteLine($"Inside x{x}");
+            Console.WriteLine($"Inside y{y}");
+        }
+    } 
+   
+}
